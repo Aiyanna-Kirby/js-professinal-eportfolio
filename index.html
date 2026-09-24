@@ -84,6 +84,105 @@
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's some info about me!
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
+          <p class="modal__para">
+            I'm a 20-year-old <b class="purple">Software Engineer</b> looking to
+            create beautiful, <b class="purple">user friendly</b> websites.
+            <br />
+            I currently work on difficult engineering projects with
+            <b class="purple">extremely talented</b> and
+            <b class="purple">experienced</b> developers.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://img.icons8.com/?size=96&id=20909&format=png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://img.icons8.com/?size=96&id=20909&format=png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://img.icons8.com/?size=96&id=20909&format=png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img
+                class="modal__language--img"
+                src="https://img.icons8.com/?size=96&id=20909&format=png"
+                alt=""
+              />
+              <span class="language__name">HTML</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's Chat!</h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I'm open and ready to hear from you!
+          </h4>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label" for="name">Name</label>
+              <input
+                class="input"
+                id="name"
+                name="user-name"
+                type="text"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="email">Email</label>
+              <input
+                class="input"
+                id="email"
+                name="user-email"
+                type="email"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label" for="message">Message</label>
+              <textarea
+                class="input"
+                id="message"
+                name="message"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Send info my way!
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you! Looking forward to speaking soon!
+          </div>
+        </div>
+        <i class="fas fa-times modal__exit click"></i>
+      </div>
     </section>
     <section id="projects">
       <div class="container">
@@ -136,7 +235,8 @@
           <figure>
             <img
               src="./assets/Black Elegant Modern Name Initials Monogram Logo.png"
-              class="footer__logo--img" alt=""
+              class="footer__logo--img"
+              alt=""
             />
           </figure>
           <div class="footer__social--list">
