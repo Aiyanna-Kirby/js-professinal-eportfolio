@@ -1,3 +1,19 @@
+let isModalOpen = false;
+let contrastToggle = false
+
+/* CONTRAST TOGGLE */
+
+function toggleContrast() {
+  contrastToggle= !contrastToggle
+  if (contrastToggle) {
+    document.body.classList += " dark-theme"
+  }
+  else {
+    document.body.classList.remove("dark-theme")
+  }
+  
+}
+
 /* EMAIL CONNECT */
 
 function contact(event) {
@@ -26,7 +42,6 @@ function contact(event) {
 
 /* MODAL TOGGLE */
 
-let isModalOpen = false;
 function toggleModal () {
   if (isModalOpen) {
     isModalOpen = false;
