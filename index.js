@@ -1,17 +1,30 @@
 let isModalOpen = false;
-let contrastToggle = false
+let contrastToggle = false;
+const scaleFactor = 1 / 20;
+
+/* MOVING SHAPES (BACKGROUND) */
+
+function moveBackground(event) {
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
+
+  for (let i = 0; i < shapes.length; ++i) {
+    const isOdd = i % 2 !== 0;
+    const boolInt = isOdd ? -1 : 1;
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`;
+  }
+}
 
 /* CONTRAST TOGGLE */
 
 function toggleContrast() {
-  contrastToggle= !contrastToggle
+  contrastToggle = !contrastToggle;
   if (contrastToggle) {
-    document.body.classList += " dark-theme"
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
   }
-  else {
-    document.body.classList.remove("dark-theme")
-  }
-  
 }
 
 /* EMAIL CONNECT */
@@ -42,11 +55,11 @@ function contact(event) {
 
 /* MODAL TOGGLE */
 
-function toggleModal () {
+function toggleModal() {
   if (isModalOpen) {
     isModalOpen = false;
-    return document.body.classList.remove("modal--open")
+    return document.body.classList.remove("modal--open");
   }
   isModalOpen = true;
-  document.body.classList += " modal--open"
+  document.body.classList += " modal--open";
 }
